@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private float minZoomDist, maxZoomDist, zoomSpeed, zoomModifier, moveSpeed;
+    [SerializeField] private float minZoomDist, maxZoomDist, zoomSpeed, zoomModifier, moveSpeed, rotationAmount;
+    [SerializeField] private Quaternion newRotation;
 
     [SerializeField] private Transform coner1, coner2;
     private Camera cam;
@@ -15,6 +16,9 @@ public class CameraController : MonoBehaviour
     {
         instance = this;
         cam = Camera.main;
+
+        newRotation = transform.rotation;
+
     }
 
     // Update is called once per frame
@@ -22,6 +26,7 @@ public class CameraController : MonoBehaviour
     {
         Zoom();
         MovebyKB();
+        Rotate();
     }
 
     private void Zoom()
@@ -62,10 +67,25 @@ public class CameraController : MonoBehaviour
 
     private Vector3 Clamp(Vector3 LowerLeft, Vector3 TopRight)
     {
-        Vector3 pos = new Vector3(  Mathf.Clamp(transform.position.x, LowerLeft.x, TopRight.x),
+        Vector3 pos = new Vector3(Mathf.Clamp(transform.position.x, LowerLeft.x, TopRight.x),
                                                 transform.position.y,
                                     Mathf.Clamp(transform.position.z, LowerLeft.z, TopRight.z)
         );
         return pos;
+    }
+
+    private void Rotate()
+    {
+        if (Input.GetKey(KeyCode.Q))
+        {
+            newRotation *= Quaternion.Euler(Vector3.up * rotationAmount);
+        }
+
+        if (Input.GetKey(KeyCode.E))
+        {
+            newRotation *= Quaternion.Euler(Vector3.up * -rotationAmount);
+        }
+
+        transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, Time.deltaTime * moveSpeed);
     }
 }
