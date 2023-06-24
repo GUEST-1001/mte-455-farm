@@ -546,3 +546,4 @@ MonoBehaviour:
   maxZoomDist: 600
   zoomSpeed: 100
   zoomModifier: 0
+  moveSpeed: 150
