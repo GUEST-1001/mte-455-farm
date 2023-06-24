@@ -33,16 +33,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 0
     wrapV: 0
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -53,7 +53,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,18 +103,1628 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CraftTool_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1111
+        width: 165
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab5fc4025776bc4986be061f158d568
+      internalID: -1567324532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_1
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 1113
+        width: 154
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02659446592d67849bc513f41ac13022
+      internalID: -1744559799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_2
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 1120
+        width: 171
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab2b67cb73a35c4d930f5537937bd1d
+      internalID: -1855749572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_3
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 1111
+        width: 170
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd81e68a3a21b749a02a5a5397a9cd9
+      internalID: 1656482199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_4
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 1109
+        width: 157
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7aafd7a6c3cc94bbb0ecdd36557543
+      internalID: -119929360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_5
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1110
+        width: 173
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05bd4bd5603238e4d95c52f9bebb7967
+      internalID: -1698314804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_6
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1109
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57fe8ab3f81fb7c45b230f956b4c7be4
+      internalID: -1188956159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_7
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 1107
+        width: 135
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac65d684c00faa24ab67a51e44f91434
+      internalID: -557061736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_8
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 1117
+        width: 154
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f3d42820c96534c80c05775eb0f6d9
+      internalID: 1809093813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_9
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 1107
+        width: 174
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5784dd8854ddab54b8c707539b5dda9c
+      internalID: 1280954714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_10
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1108
+        width: 162
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c482bc4396823e4a97ef18d2b5e33eb
+      internalID: -670851592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_11
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 932
+        width: 174
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb9b4be40b170140b4abc49af2f810b
+      internalID: 1136631706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_12
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 932
+        width: 164
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea457d39b243fc48843fda4bc80b4f6
+      internalID: 1289166014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_13
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 937
+        width: 158
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d666dc7fa3e59f45b300053f22d9538
+      internalID: 919904284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_14
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 934
+        width: 171
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50cf5b311cc589149afc95bf92100b10
+      internalID: 1147708220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_15
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 943
+        width: 175
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49466f042f385394983d0d54bc6aff3b
+      internalID: 1913557312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_16
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 943
+        width: 152
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1cc64d9cf184a43a9d797cd55bffb5
+      internalID: -1038527641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_17
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 932
+        width: 168
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72348e8989903d941a5f9d0e90b05035
+      internalID: 1644988263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_18
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 939
+        width: 176
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b4c5b58dc0067648a85251eb1cc453f
+      internalID: -582924546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_19
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 932
+        width: 172
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7119517ddb0097b43a5fda1378950e26
+      internalID: 392743326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_20
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 932
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf7ce8b798a05440bbae0225e88ffc6
+      internalID: 1269640544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_24
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 756
+        width: 126
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b9b67066ecfe6498044deca40ef6fb
+      internalID: 794867152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_25
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 761
+        width: 171
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32dde368ffee5845ab6e2736c820ba7
+      internalID: 763770045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_26
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 763
+        width: 176
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378f42ddafad25e439d1fa951d9bf72e
+      internalID: 1997907651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_27
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 761
+        width: 160
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8a39bc7f76e1094bb15f8f388897d06
+      internalID: -1384481602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_28
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 756
+        width: 150
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17491300c22d7c546812bcfadd4546f6
+      internalID: -7727806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_29
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 762
+        width: 176
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336ca89c723a36e45a437d821994bca3
+      internalID: 863057856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_30
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 759
+        width: 163
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dba18a5eb7185944915b382b1877931
+      internalID: -1297205844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_31
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 748
+        width: 168
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7333763178a8540b563c427ea11f79
+      internalID: 1495695621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_32
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 762
+        width: 172
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c423373c818fe1a42b432044d0efc844
+      internalID: -215978877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_33
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 769
+        width: 110
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e4ad77a1370b845b9df5edbf19966b
+      internalID: -1458264152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_34
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 758
+        width: 122
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a34a90a1f70e5488fe68a6fda8730f
+      internalID: -419071313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_35
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 572
+        width: 175
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38bddc84c8ff17c449baec0862607dcd
+      internalID: -1388144423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_36
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 564
+        width: 142
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df39e6f605514546a230e702f34eac3
+      internalID: 1275851921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_37
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 564
+        width: 172
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377c8fa75f6734c42840d36d9ff6fbc2
+      internalID: 2040065185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_38
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 565
+        width: 133
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ffd2708ca6dfd47b76a0ddd7c91739
+      internalID: 1824628855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_39
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 563
+        width: 173
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d210a9db8d2da45a158251c74e9eb7
+      internalID: 1059233253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_40
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 567
+        width: 160
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d8b12e80ddcc4449cad176b0496fa9
+      internalID: -1394371924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_41
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 564
+        width: 170
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa3d511d23d8ef428b2897ccb13536d
+      internalID: -796038417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_42
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 562
+        width: 172
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0747ff96a943ca24cb9c9152914ebe81
+      internalID: -991920097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_43
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 562
+        width: 149
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff492546dd206f41bbe2683b895bcc6
+      internalID: -1129582440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_44
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 561
+        width: 130
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2094e4a55f555b4ca8359e84c76cada
+      internalID: 1471540398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_45
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 402
+        width: 164
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15390682efb1b64c91e925af2f5d1af
+      internalID: -1622901817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_46
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 392
+        width: 162
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a081014b75cc2e14eba3eb83e142fc1c
+      internalID: 557145533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_47
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 503
+        width: 51
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4005f7f82fce8f742ba8b504d03b70a1
+      internalID: 1259795841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_48
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 391
+        width: 163
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89dbfab0f5bac7a43a1c6546dc6d4a02
+      internalID: -2007202443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_49
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 389
+        width: 172
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33dc2764c704a264098ef31dc1894b14
+      internalID: -546894353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_50
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 388
+        width: 168
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f109d7f909dfdc489ea090e964f6150
+      internalID: 1161534000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_51
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 396
+        width: 170
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17fcfc6455412cd41ad6fc2c024d5646
+      internalID: -607537291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_52
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 384
+        width: 173
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b297e0643dd7d4e80e8b126a21cb1f
+      internalID: -9363061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_53
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 386
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de95b0f380aea1544b3fb747276850b1
+      internalID: 756035991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_54
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 388
+        width: 170
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce71c7a0b1c1274ca35f1b5b03be1b6
+      internalID: -1018941808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_55
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 388
+        width: 171
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 207180a9486866748ad4bf2e18ab196a
+      internalID: 445400919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_56
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 389
+        width: 49
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f037c92cb1e48741a8f0dabc862d328
+      internalID: -1510798416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_57
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 191
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db7d51283e8241489c362e9aa0deb56
+      internalID: 1400539002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_58
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 191
+        width: 173
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d64c6bdc002a9a4481bf4711f080b29
+      internalID: 391644236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_59
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 193
+        width: 175
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558cfd5adafee354989b2faa6259f24d
+      internalID: -1428598873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_60
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 194
+        width: 161
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de78a7851c8ff12408554c20457baab5
+      internalID: 1601719644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_61
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 190
+        width: 173
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c423accd7ac3e4680e1ab337623f6b
+      internalID: 1068887928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_62
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 193
+        width: 173
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e8b7c212f770b4fafc37c854ff2553
+      internalID: 1437540727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_63
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 191
+        width: 171
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03b8dedd4d550d744a1f65895baa3e94
+      internalID: -273004155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_64
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 193
+        width: 175
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458cf15399c6c694eaaf464ae4c494b8
+      internalID: 1425761765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_65
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 193
+        width: 174
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f497df1bfe013f4ba5caaca138e6ba5
+      internalID: -1702252049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_66
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 12
+        width: 165
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b622bf1eed47346438b2ba41d3b1c0a3
+      internalID: -12649637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_67
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 17
+        width: 167
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb006785373504419c168f933afe347
+      internalID: 518847269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_68
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 13
+        width: 175
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a497aec9099a345bcf633eb9ff2739
+      internalID: -1267513041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_69
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 14
+        width: 166
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 272cb896d5115694981bca2af6616ed4
+      internalID: 594904405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_70
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 12
+        width: 144
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b581c4f4ef11b4d81b82dfaa6be99d
+      internalID: -1140361336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_71
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 20
+        width: 173
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0238df9a12064a6479b6cba93819c5f9
+      internalID: -462017455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_72
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 22
+        width: 169
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8b89307b6a8684a8f57eeb24e5711e
+      internalID: -611354804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_73
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 16
+        width: 161
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48117dacb59afe4cb8816e2526bd091
+      internalID: -80101174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_75
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 14
+        width: 168
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac75668fa38d0994d8ec172aa278ae02
+      internalID: -1890711493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftTool_76
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 933
+        width: 165
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d81a911daa621f40b56709cafffd378
+      internalID: -824860735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6b0013aafa8a4e047ad1c383fc369610
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CraftTool_59: -1428598873
+      CraftTool_75: -1890711493
+      CraftTool_14: 1147708220
+      CraftTool_2: -1855749572
+      CraftTool_23: 73033628
+      CraftTool_39: 1059233253
+      CraftTool_35: -1388144423
+      CraftTool_57: 1400539002
+      CraftTool_36: 1275851921
+      CraftTool_51: -607537291
+      CraftTool_71: -462017455
+      CraftTool_26: 1997907651
+      CraftTool_54: -1018941808
+      CraftTool_58: 391644236
+      CraftTool_1: -1744559799
+      CraftTool_74: -2111263571
+      CraftTool_48: -2007202443
+      CraftTool_34: -419071313
+      CraftTool_10: -670851592
+      CraftTool_27: -1384481602
+      CraftTool_19: 392743326
+      CraftTool_68: -1267513041
+      CraftTool_4: -119929360
+      CraftTool_24: 794867152
+      CraftTool_45: -1622901817
+      CraftTool_50: 1161534000
+      CraftTool_28: -7727806
+      CraftTool_40: -1394371924
+      CraftTool_49: -546894353
+      CraftTool_56: -1510798416
+      CraftTool_61: 1068887928
+      CraftTool_55: 445400919
+      CraftTool_70: -1140361336
+      CraftTool_3: 1656482199
+      CraftTool_64: 1425761765
+      CraftTool_76: 1451373625
+      CraftTool_6: -1188956159
+      CraftTool_29: 863057856
+      CraftTool_8: 1809093813
+      CraftTool_7: -557061736
+      CraftTool_20: 1269640544
+      CraftTool_11: 1136631706
+      CraftTool_9: 1280954714
+      CraftTool_32: -215978877
+      CraftTool_0: -1567324532
+      CraftTool_67: 518847269
+      CraftTool_73: -80101174
+      CraftTool_47: 1259795841
+      CraftTool_52: -9363061
+      CraftTool_22: 58215555
+      CraftTool_60: 1601719644
+      CraftTool_69: 594904405
+      CraftTool_5: -1698314804
+      CraftTool_17: 1644988263
+      CraftTool_30: -1297205844
+      CraftTool_53: 756035991
+      CraftTool_25: 763770045
+      CraftTool_46: 557145533
+      CraftTool_65: -1702252049
+      CraftTool_72: -611354804
+      CraftTool_43: -1129582440
+      CraftTool_42: -991920097
+      CraftTool_33: -1458264152
+      CraftTool_66: -12649637
+      CraftTool_21: -62214642
+      CraftTool_63: -273004155
+      CraftTool_16: -1038527641
+      CraftTool_12: 1289166014
+      CraftTool_44: 1471540398
+      CraftTool_62: 1437540727
+      CraftTool_13: 919904284
+      CraftTool_15: 1913557312
+      CraftTool_37: 2040065185
+      CraftTool_18: -582924546
+      CraftTool_38: 1824628855
+      CraftTool_31: 1495695621
+      CraftTool_41: -796038417
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
