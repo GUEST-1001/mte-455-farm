@@ -5,6 +5,8 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private float minZoomDist, maxZoomDist, zoomSpeed, zoomModifier, moveSpeed;
+
+    [SerializeField] private Transform coner1, coner2;
     private Camera cam;
     public static CameraController instance;
 
@@ -55,5 +57,15 @@ public class CameraController : MonoBehaviour
 
         Vector3 dir = transform.forward * zInput + transform.right * xInput;
         transform.position += dir * moveSpeed * Time.deltaTime;
+        transform.position = Clamp(coner1.position, coner2.position);
+    }
+
+    private Vector3 Clamp(Vector3 LowerLeft, Vector3 TopRight)
+    {
+        Vector3 pos = new Vector3(  Mathf.Clamp(transform.position.x, LowerLeft.x, TopRight.x),
+                                                transform.position.y,
+                                    Mathf.Clamp(transform.position.z, LowerLeft.z, TopRight.z)
+        );
+        return pos;
     }
 }
