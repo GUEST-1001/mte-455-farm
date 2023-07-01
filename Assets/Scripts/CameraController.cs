@@ -93,4 +93,5 @@ public class CameraController : MonoBehaviour
 
         transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, Time.deltaTime * moveSpeed);
     }
+
 }
