@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bf2c3f5a5a0515f4b85d9facf48c1947
+guid: 1d4570ba659ce2f498e7475f14e9e93a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -143,7 +143,9 @@ ModelImporter:
     400134: Retargeters
     400136: RightHandIK
     400138: RightHandProp
-    7400000: Villager@Gathering01
+    7400000: Villager@Farm-Idle01
+    7400002: Villager@Sack-PlantingSeeds01
+    7400004: Villager@Farm-Idle01_B
     9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
@@ -175,10 +177,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Villager@Gathering01
-      takeName: Default Take
+      name: Villager@Sack-PlantingSeeds01
+      takeName: Villager@Farm-Idle01_A
       firstFrame: 0
-      lastFrame: 29
+      lastFrame: 67
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
