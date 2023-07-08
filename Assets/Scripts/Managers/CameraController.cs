@@ -78,12 +78,12 @@ public class CameraController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Q))
         {
-            newRotation *= Quaternion.Euler(Vector3.up * rotationAmount);
+            newRotation *= Quaternion.Euler(Vector3.up * rotationAmount * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.E))
         {
-            newRotation *= Quaternion.Euler(Vector3.up * -rotationAmount);
+            newRotation *= Quaternion.Euler(Vector3.up * -rotationAmount * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.Home))

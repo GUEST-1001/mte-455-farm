@@ -7,6 +7,7 @@ public enum StructureType
     road,
     building,
     wheat,
+    melon,
 }
 
 public abstract class Structure : MonoBehaviour
