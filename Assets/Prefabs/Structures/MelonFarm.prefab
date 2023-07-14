@@ -151,7 +151,7 @@ MonoBehaviour:
   functional: 0
   structureName: Melon Farm
   hp: 1
-  costToBuild: 1800
+  costToBuild: 3000
   id: 1
   stage: 0
   maxStaffNum: 3
