@@ -54,6 +54,7 @@ public class LaborMarket : MonoBehaviour
             w.ID = i;
             w.InitiateCharID(Random.Range(0, 5));
             w.SetGender();
+            w.ChangeCharSkin();
 
             w.StaffName = SetName(w);
             w.DailyWage = Random.Range(80, 120);
