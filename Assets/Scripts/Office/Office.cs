@@ -73,6 +73,7 @@ public class Office : MonoBehaviour
             return false;
 
         workerObj.transform.parent = staffParent.transform;
+        // workerObj.transform.position = spawnPosition.transform.position;
         Worker w = workerObj.GetComponent<Worker>();
 
         w.Hired = true; //Hire this worker
