@@ -8,12 +8,15 @@ public enum StructureType
     building,
     wheat,
     melon,
+    corn,
+    milk,
+    apple,
 }
 
 public abstract class Structure : MonoBehaviour
 {
 
-    [SerializeField] private StructureType structureType;
+    [SerializeField] protected StructureType structureType;
     public StructureType StructureType { get { return structureType; } set { structureType = value; } }
 
     [SerializeField] protected bool functional;
