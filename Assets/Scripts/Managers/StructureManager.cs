@@ -99,7 +99,7 @@ public class StructureManager : MonoBehaviour
             if (isConstructing)
                 PlaceBuilding(); //Real Construction
             else
-                CheckOpenPanel();
+                CheckOpenPanel(); //Normal Mode
         }
     }
 
@@ -161,5 +161,10 @@ public class StructureManager : MonoBehaviour
         }
     }
 
+    public void CallStaff()
+    {
+        Office.instance.SendStaff(CurStructure);
+        MainUI.instance.UpdateResourceUI();
+    }
 
 }

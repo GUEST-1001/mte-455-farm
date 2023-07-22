@@ -91,4 +91,9 @@ public class Farm : Structure
         }
     }
 
+    public void AddStaffToFarm(Worker w)
+    {
+        currentWorkers.Add(w);
+    }
+
 }
