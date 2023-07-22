@@ -57,9 +57,14 @@ public class MainUI : MonoBehaviour
     public void ToggleLaborPanel()
     {
         if (!laborMarketPanel.activeInHierarchy)
+        {
             laborMarketPanel.SetActive(true);
+            
+        }
         else
+        {
             laborMarketPanel.SetActive(false);
+        }
     }
 
     public void ToggleFarmPanel()
