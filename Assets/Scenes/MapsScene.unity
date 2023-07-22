@@ -4338,7 +4338,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1826096181}
+        m_TargetAssemblyTypeName: Market, Assembly-CSharp
+        m_MethodName: SellAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1015915217
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7393,6 +7405,7 @@ GameObject:
   - component: {fileID: 1826096180}
   - component: {fileID: 1826096179}
   - component: {fileID: 1826096178}
+  - component: {fileID: 1826096181}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -7462,6 +7475,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09395b1283979941b7b2bf0d91e3117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1826096181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826096176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb2bc4afaf084e449a0dabacf26e317a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _curPriceWheat: 50
+  _curPriceMelon: 100
 --- !u!1 &1833716314
 GameObject:
   m_ObjectHideFlags: 0
