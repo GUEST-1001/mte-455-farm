@@ -33,7 +33,7 @@ public class Office : MonoBehaviour
 
     [SerializeField] private GameObject staffParent;
 
-    [SerializeField] private GameObject spawnPosition;
+    [SerializeField] public GameObject spawnPosition;
     [SerializeField] private GameObject rallyPosition;
 
     public static Office instance;

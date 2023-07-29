@@ -25,6 +25,8 @@ public class StructureManager : MonoBehaviour
     [SerializeField] private GameObject[] structurePrefab;
     private Camera cam;
 
+    public GameObject demolishCursor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +46,11 @@ public class StructureManager : MonoBehaviour
         if (isConstructing) //Mode Construct
         {
             buildingCursor.transform.position = curCursorPos;
+            gridPlane.SetActive(true);
+        }
+        else if (isDemolishing)
+        {
+            demolishCursor.transform.position = curCursorPos;
             gridPlane.SetActive(true);
         }
         else //Mode Play
@@ -98,6 +105,8 @@ public class StructureManager : MonoBehaviour
         {
             if (isConstructing)
                 PlaceBuilding(); //Real Construction
+            else if (isDemolishing)
+                Demolish(); 
             else
                 CheckOpenPanel(); //Normal Mode
         }
@@ -165,6 +174,27 @@ public class StructureManager : MonoBehaviour
     {
         Office.instance.SendStaff(CurStructure);
         MainUI.instance.UpdateResourceUI();
+    }
+
+    private void Demolish()
+    {
+        Structure s = Office.instance.Structures.Find(x => x.transform.position == curCursorPos);
+
+        if (s != null)
+        {
+            Office.instance.RemoveBuilding(s);
+        }
+
+        MainUI.instance.UpdateResourceUI();
+    }
+
+    public void ToggleDemolish() //Map with Demolish Btn
+    {
+        isConstructing = false;
+        isDemolishing = !isDemolishing;
+
+        gridPlane.SetActive(isDemolishing);
+        demolishCursor.SetActive(isDemolishing);
     }
 
 }

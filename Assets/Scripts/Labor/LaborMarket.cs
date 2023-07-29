@@ -56,7 +56,7 @@ public class LaborMarket : MonoBehaviour
 
     public void GenerateCandidate()
     {
-        for (int i = StaffInMarket; i < maxStaffInMarket; i++)
+        for (int i = 0; i < 20; i++)
         {
             GameObject staffObj = Instantiate(workerPrefab, workerParent.transform);
 
@@ -76,7 +76,7 @@ public class LaborMarket : MonoBehaviour
             laborCardInMarket.Add(cardObj);
             StaffInMarket++;
         }
-        maxStaffInMarket += maxStaffInMarket - getChildren(staffCardParent);
+        // maxStaffInMarket += maxStaffInMarket - getChildren(staffCardParent);
     }
 
     private string SetName(Worker w)
