@@ -154,6 +154,7 @@ public class Office : MonoBehaviour
         Worker w = staffObj.GetComponent<Worker>();
 
         w.Hired = false; //Fire this staff
+        w.DisableAllTools();
 
         if (w.TargetStructure != null)
         {
