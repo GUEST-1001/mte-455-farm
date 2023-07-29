@@ -56,6 +56,8 @@ public class Worker : MonoBehaviour
     [SerializeField] private GameObject targetStructure;
     public GameObject TargetStructure { get { return targetStructure; } set { targetStructure = value; } }
 
+    [SerializeField] private GameObject[] tools;
+
     //Timer
     private float CheckStateTimer = 0f;
     private float CheckStateTimeWait = 0.5f;
@@ -145,7 +147,7 @@ public class Worker : MonoBehaviour
             }
         }
     }
-    
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject != targetStructure)
@@ -161,22 +163,38 @@ public class Worker : MonoBehaviour
             {
                 case FarmStage.plowing:
                     state = UnitState.Plow;
+                    EquipTool(0); //Hoe
                     farm.CheckTimeForWork();
                     break;
                 case FarmStage.sowing:
                     state = UnitState.Sow;
+                    EquipTool(1); //Sack
                     farm.CheckTimeForWork();
                     break;
                 case FarmStage.maintaining:
                     state = UnitState.Water;
+                    EquipTool(2); //Watering can
                     farm.CheckTimeForWork();
                     break;
                 case FarmStage.harvesting:
                     state = UnitState.Harvest;
+                    DisableAllTools();
                     farm.CheckTimeForWork();
                     break;
             }
         }
+    }
+
+    private void DisableAllTools()
+    {
+        for (int i = 0; i < tools.Length; i++)
+            tools[i].SetActive(false);
+    }
+
+    private void EquipTool(int i)
+    {
+        DisableAllTools();
+        tools[i].SetActive(true);
     }
 
 }
