@@ -7,6 +7,7 @@ public class LaborMarket : MonoBehaviour
 
     [SerializeField] private GameObject workerPrefab;
     [SerializeField] private GameObject workerParent;
+    public GameObject WorkerParent { get { return workerParent; } }
 
     [SerializeField] private GameObject staffCardPrefab;
     [SerializeField] private GameObject staffCardParent;
@@ -45,18 +46,18 @@ public class LaborMarket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Timer += Time.deltaTime;
+        // Timer += Time.deltaTime;
 
-        if (Timer > 1f)
-        {
-            Debug.Log(getChildren(staffCardParent));
-            Timer = 0f;
-        }
+        // if (Timer > 1f)
+        // {
+        //     Debug.Log(getChildren(staffCardParent));
+        //     Timer = 0f;
+        // }
     }
 
     public void GenerateCandidate()
     {
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < maxStaffInMarket; i++)
         {
             GameObject staffObj = Instantiate(workerPrefab, workerParent.transform);
 
@@ -65,6 +66,7 @@ public class LaborMarket : MonoBehaviour
             w.InitiateCharID(Random.Range(0, 5));
             w.SetGender();
             w.ChangeCharSkin();
+            w.SetToWalk(Office.instance.SpawnPosition.transform.position);
 
             w.StaffName = SetName(w);
             w.DailyWage = Random.Range(80, 120);
@@ -74,7 +76,6 @@ public class LaborMarket : MonoBehaviour
             GameObject cardObj = InitializeLaborCard(w);
 
             laborCardInMarket.Add(cardObj);
-            StaffInMarket++;
         }
         // maxStaffInMarket += maxStaffInMarket - getChildren(staffCardParent);
     }
