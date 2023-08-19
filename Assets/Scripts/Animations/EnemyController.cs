@@ -45,7 +45,7 @@ public class EnemyController : MonoBehaviour
         anim.SetBool("isPlow", false);
         anim.SetBool("isSow", false);
         anim.SetBool("isWater", false);
-        anim.SetBool("isHarvest", false);
+        anim.SetBool("isHavest", false);
         anim.SetBool("isAttack", false);
     }
 
