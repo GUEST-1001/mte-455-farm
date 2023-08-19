@@ -1891,7 +1891,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1826096178}
+        m_TargetAssemblyTypeName: StructureManager, Assembly-CSharp
+        m_MethodName: BeginNewBuildingPlacement
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4751895218554993740, guid: 235a58174d1881f4ca520e3f426754fa, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &350020423
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2958,7 +2970,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1826096178}
+        m_TargetAssemblyTypeName: StructureManager, Assembly-CSharp
+        m_MethodName: BeginNewBuildingPlacement
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 6340796346654913936, guid: 753a1790ad469144790e991d1d7c5e2b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &670261712
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4675,6 +4699,8 @@ MonoBehaviour:
   staffParent: {fileID: 1149445448}
   spawnPosition: {fileID: 823714016}
   rallyPosition: {fileID: 1296738215}
+  unitLimit: 3
+  housingUnitNum: 6
 --- !u!1 &1120144556
 GameObject:
   m_ObjectHideFlags: 0
@@ -7471,6 +7497,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1182219286}
+  - {fileID: 2087820692}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7496,6 +7523,11 @@ MonoBehaviour:
   _curStructure: {fileID: 0}
   structurePrefab: []
   demolishCursor: {fileID: 941396664}
+  roadGreenTilePrefab: {fileID: 599931064188254809, guid: 28884b8845b210f4fb323bce3d72f1a6, type: 3}
+  roadGreenTileParent: {fileID: 2087820691}
+  startRoadPos: {x: 0, y: 0, z: 0}
+  endRoadPos: {x: 0, y: 0, z: 0}
+  roadGreenTilesList: []
 --- !u!114 &1826096179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8464,6 +8496,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075705881}
   m_CullTransparentMesh: 1
+--- !u!1 &2087820691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2087820692}
+  m_Layer: 0
+  m_Name: RoadTileParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2087820692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087820691}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1826096177}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2091657183
 GameObject:
   m_ObjectHideFlags: 0

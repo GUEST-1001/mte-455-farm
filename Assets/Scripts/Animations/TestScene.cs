@@ -8,7 +8,7 @@ public class TestScene : MonoBehaviour
 
     public void WorkerIdle()
     {
-        worker.State = UnitState.Idel;
+        worker.State = UnitState.Idle;
     }
 
     public void WorkerWalk()
