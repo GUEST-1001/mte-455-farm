@@ -16,7 +16,9 @@ public enum UnitState
     MoveToAttackUnit,
     AttackUnit,
     MoveToAttackBuilding,
-    AttackBuilding
+    AttackBuilding,
+    Mining,
+    Die
 }
 
 public abstract class Unit : MonoBehaviour
@@ -49,6 +51,8 @@ public abstract class Unit : MonoBehaviour
     [SerializeField] protected float CheckStateTimeWait = 0.5f;
 
     [SerializeField] protected GameObject[] tools;
+    [SerializeField] protected GameObject weapon;
+
 
     void Awake()
     {
@@ -133,14 +137,36 @@ public abstract class Unit : MonoBehaviour
 
     protected void AttackBuilding()
     {
-        navAgent.isStopped = true;
+        EquipWeapon();
+        if (navAgent != null)
+            navAgent.isStopped = true;
 
         if (targetStructure != null)
         {
+            LookAt(targetStructure.transform.position);
             Building b = targetStructure.GetComponent<Building>();
 
-            b.HP -= (int)attackPower;
+            b.TakeDamage(AttackPower);
         }
+    }
+
+    protected void DisableWeapon()
+    {
+        weapon.SetActive(false);
+    }
+
+    protected void EquipWeapon()
+    {
+        weapon.SetActive(true);
+    }
+
+    // rotate to face the given position
+    protected void LookAt(Vector3 pos)
+    {
+        Vector3 dir = (pos - transform.position).normalized;
+        float angle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
+
+        transform.rotation = Quaternion.Euler(0, angle, 0);
     }
 
 }

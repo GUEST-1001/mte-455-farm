@@ -33,7 +33,11 @@ public class EnemyController : MonoBehaviour
                 anim.SetBool("isWalk", true);
                 break;
             case UnitState.AttackBuilding:
+            case UnitState.AttackUnit:
                 anim.SetBool("isAttack", true);
+                break;
+            case UnitState.Die:
+                anim.SetBool("isDead", true);
                 break;
         }
     }
@@ -47,6 +51,7 @@ public class EnemyController : MonoBehaviour
         anim.SetBool("isWater", false);
         anim.SetBool("isHavest", false);
         anim.SetBool("isAttack", false);
+        anim.SetBool("isDead", false);
     }
 
 }
