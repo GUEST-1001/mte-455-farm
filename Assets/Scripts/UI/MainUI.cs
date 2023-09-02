@@ -24,6 +24,10 @@ public class MainUI : MonoBehaviour
     [SerializeField] private TMP_Text farmNameText;
     public TMP_Text FarmNameText
     { get { return farmNameText; } set { farmNameText = value; } }
+    public GameObject warehousePanel;
+
+    [SerializeField] private TMP_Text warehouseNameText;
+    public TMP_Text WarehouseNameText { get { return warehouseNameText; } set { warehouseNameText = value; } }
 
     public static MainUI instance;
 
@@ -59,7 +63,7 @@ public class MainUI : MonoBehaviour
         if (!laborMarketPanel.activeInHierarchy)
         {
             laborMarketPanel.SetActive(true);
-            
+
         }
         else
         {
@@ -73,5 +77,13 @@ public class MainUI : MonoBehaviour
             farmPanel.SetActive(true);
         else
             farmPanel.SetActive(false);
+    }
+
+    public void ToggleWarehousePanel()
+    {
+        if (!warehousePanel.activeInHierarchy)
+            warehousePanel.SetActive(true);
+        else
+            warehousePanel.SetActive(false);
     }
 }

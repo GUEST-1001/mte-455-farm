@@ -179,6 +179,9 @@ public class StructureManager : MonoBehaviour
                 case "Farm": // if we click Object with Farm tag 
                     OpenFarmPanel();
                     break;
+                case "Warehouse": // if we click Object with Farm tag 
+                    OpenWarehousePanel();
+                    break;
             }
         }
     }
@@ -330,5 +333,13 @@ public class StructureManager : MonoBehaviour
             ConstructRoad();
     }
     #endregion
+
+    public void OpenWarehousePanel()
+    {
+        string name = CurStructure.GetComponent<Building>().StructureName;
+
+        MainUI.instance.WarehouseNameText.text = name;
+        MainUI.instance.ToggleWarehousePanel();
+    }
 
 }

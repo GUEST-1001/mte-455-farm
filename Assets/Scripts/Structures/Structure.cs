@@ -20,6 +20,7 @@ public abstract class Structure : MonoBehaviour
     public StructureType StructureType { get { return structureType; } set { structureType = value; } }
 
     [SerializeField] protected bool functional;
+    public bool Functional { get { return functional; } }
 
     [SerializeField] protected string structureName;
     public string StructureName { get { return structureName; } }
@@ -35,6 +36,9 @@ public abstract class Structure : MonoBehaviour
 
     [SerializeField] protected bool isHousing;
     public bool IsHousing { get { return isHousing; } set { isHousing = value; } }
+
+    [SerializeField] protected bool isWarehouse;
+    public bool IsWarehouse { get { return isWarehouse; } set { isWarehouse = value; } }
 
 
     // Start is called before the first frame update
