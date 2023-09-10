@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using System;
+using UnityEngine.Events;
 
 
 public enum UnitState
@@ -18,6 +19,9 @@ public enum UnitState
     MoveToAttackBuilding,
     AttackBuilding,
     Mining,
+    MoveToMining,
+    Deliver,
+    MoveToDeliver,
     Die
 }
 
@@ -56,6 +60,8 @@ public abstract class Unit : MonoBehaviour
     [SerializeField] protected GameObject[] tools;
     [SerializeField] protected GameObject weapon;
 
+    public UnityEvent<UnitState> onStateChange;
+
 
     void Awake()
     {
@@ -67,7 +73,7 @@ public abstract class Unit : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         CheckStaffState();
     }
@@ -112,13 +118,13 @@ public abstract class Unit : MonoBehaviour
         if (distance <= 3f)
         {
             navAgent.isStopped = true;
-            state = UnitState.Idle;
+            SetUnitState(UnitState.Idle);
         }
     }
 
     public void SetToWalk(Vector3 dest)
     {
-        state = UnitState.Walk;
+        SetUnitState(UnitState.Walk);
 
         navAgent.SetDestination(dest);
         navAgent.isStopped = false;
@@ -128,7 +134,7 @@ public abstract class Unit : MonoBehaviour
     {
         if (targetStructure == null)
         {
-            state = UnitState.Idle;
+            SetUnitState(UnitState.Idle);
             navAgent.isStopped = true;
             return;
         }
@@ -141,7 +147,7 @@ public abstract class Unit : MonoBehaviour
         distance = Vector3.Distance(transform.position, targetStructure.transform.position);
 
         if (distance <= attackRange)
-            state = UnitState.AttackBuilding;
+            SetUnitState(UnitState.AttackBuilding);
     }
 
     protected void AttackBuilding()
@@ -199,7 +205,7 @@ public abstract class Unit : MonoBehaviour
     {
         if (targetUnit == null)
         {
-            state = UnitState.Idle;
+            SetUnitState(UnitState.Idle);
             navAgent.isStopped = true;
             return;
         }
@@ -212,7 +218,7 @@ public abstract class Unit : MonoBehaviour
         distance = Vector3.Distance(transform.position, targetUnit.transform.position);
 
         if (distance <= attackRange)
-            state = UnitState.AttackUnit;
+            SetUnitState(UnitState.AttackUnit);
     }
 
     protected void AttackUnit()
@@ -236,7 +242,7 @@ public abstract class Unit : MonoBehaviour
         if (u.gameObject != null)
         {
             targetUnit = u.gameObject;
-            state = UnitState.MoveToAttackUnit;
+            SetUnitState(UnitState.MoveToAttackUnit);
         }
     }
     public void CheckSelfDefence(Turret u)
@@ -244,8 +250,16 @@ public abstract class Unit : MonoBehaviour
         if (u.gameObject != null)
         {
             targetUnit = u.gameObject;
-            state = UnitState.MoveToAttackUnit;
+            SetUnitState(UnitState.MoveToAttackUnit);
         }
+    }
+
+    public void SetUnitState(UnitState s)
+    {
+        if (onStateChange != null) //if there is an icon
+            onStateChange.Invoke(s);
+
+        state = s;
     }
 
 }

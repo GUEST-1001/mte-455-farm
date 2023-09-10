@@ -29,6 +29,10 @@ public class WorkerController : MonoBehaviour
                 anim.SetBool("isIdle", true);
                 break;
             case UnitState.Walk:
+            case UnitState.MoveToAttackBuilding:
+            case UnitState.MoveToAttackUnit:
+            case UnitState.MoveToMining:
+            case UnitState.MoveToDeliver:
                 anim.SetBool("isWalk", true);
                 break;
             case UnitState.Plow:
@@ -65,6 +69,7 @@ public class WorkerController : MonoBehaviour
         anim.SetBool("isWater", false);
         anim.SetBool("isHavest", false);
         anim.SetBool("isDead", false);
+        anim.SetBool("isMining", false);
     }
 
 }

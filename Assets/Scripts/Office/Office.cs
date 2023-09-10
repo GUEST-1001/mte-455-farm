@@ -22,6 +22,9 @@ public class Office : MonoBehaviour
     [SerializeField] private int apple;
     public int Apple { get { return apple; } set { apple = value; } }
 
+    [SerializeField] private int stone;
+    public int Stone { get { return stone; } set { stone = value; } }
+
     [SerializeField] private int dailyCostWages;
 
     [SerializeField] private List<Structure> structures = new List<Structure>();
@@ -79,7 +82,7 @@ public class Office : MonoBehaviour
         if (money <= 0)
             return false;
 
-        if(workers.Count >= unitLimit)
+        if (workers.Count >= unitLimit)
             return false;
 
         workerObj.transform.parent = staffParent.transform;
@@ -197,5 +200,32 @@ public class Office : MonoBehaviour
             unitLimit = 0;
     }
 
+    public void SendWorkerToMine(GameObject mine, GameObject warehouse)
+    {
+        UpdateAvailStaff();
+
+        if (mine == null || availStaff <= 0)
+            return;
+
+        int n = 0; //number of Worker sent
+
+        for (int i = 0; i < workers.Count; i++)
+        {
+            if (workers[i].TargetStructure == null)
+            {
+                Worker w = workers[i].GetComponent<Worker>();
+
+                workers[i].TargetStructure = warehouse;
+                workers[i].TargetMine = mine;
+                w.StartMining(mine);
+                n++;
+            }
+
+            if (n >= 1)
+                break;
+        }
+
+        UpdateAvailStaff();
+    }
 
 }
