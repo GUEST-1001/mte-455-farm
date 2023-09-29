@@ -76,7 +76,7 @@ public class MainUI : MonoBehaviour
         if (!laborMarketPanel.activeInHierarchy)
         {
             laborMarketPanel.SetActive(true);
-
+            LaborMarket.instance.GenerateCandidate();
         }
         else
         {

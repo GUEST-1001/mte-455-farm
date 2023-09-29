@@ -21,6 +21,7 @@ public class LaborMarket : MonoBehaviour
     // [SerializeField] private GameObject workerPrefab;
     // public GameObject WorkerPrefab { get { return workerPrefab; } }
     private int StaffInMarket = 0;
+    private int StaffID = 0;
 
     private string[] maleName = { "Ben",  "John", "Sam", "Frank",
                                 "Joey", "Brandon", "Dan", "Peter",
@@ -43,7 +44,7 @@ public class LaborMarket : MonoBehaviour
     void Start()
     {
         instance = this;
-        GenerateCandidate();
+        // GenerateCandidate();
     }
 
     // Update is called once per frame
@@ -60,12 +61,13 @@ public class LaborMarket : MonoBehaviour
 
     public void GenerateCandidate()
     {
-        for (int i = 0; i < maxStaffInMarket; i++)
+        StaffInMarket = getChildren(staffCardParent);
+        for (int i = StaffInMarket; i < maxStaffInMarket; i++)
         {
             GameObject staffObj = Instantiate(workerPrefab, workerParent.transform);
 
             Worker w = staffObj.GetComponent<Worker>();
-            w.ID = i;
+            w.ID = StaffID;
             w.InitiateCharID(Random.Range(0, 5));
             w.SetGender();
             w.ChangeCharSkin();
@@ -79,6 +81,7 @@ public class LaborMarket : MonoBehaviour
             GameObject cardObj = InitializeLaborCard(w);
 
             laborCardInMarket.Add(cardObj);
+            StaffID++;
         }
         // maxStaffInMarket += maxStaffInMarket - getChildren(staffCardParent);
     }
