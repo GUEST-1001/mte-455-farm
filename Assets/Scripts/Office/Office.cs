@@ -92,7 +92,7 @@ public class Office : MonoBehaviour
         Worker w = workerObj.GetComponent<Worker>();
 
         w.Hired = true; //Hire this worker
-        w.SetToWalk(rallyPosition.transform.position);
+        w.SetToWarp(rallyPosition.transform.position);
 
         money -= w.DailyWage;
         AddStaff(w);

@@ -130,6 +130,14 @@ public abstract class Unit : MonoBehaviour
         navAgent.isStopped = false;
     }
 
+        public void SetToWarp(Vector3 dest)
+    {
+        SetUnitState(UnitState.Idle);
+
+        navAgent.Warp(dest);
+        navAgent.isStopped = true;
+    }
+
     protected void MoveToAttackBuilding()
     {
         if (targetStructure == null)
