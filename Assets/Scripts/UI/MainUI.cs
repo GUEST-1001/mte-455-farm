@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class MainUI : MonoBehaviour
 {
@@ -29,6 +30,10 @@ public class MainUI : MonoBehaviour
     [SerializeField] private TMP_Text warehouseNameText;
     public TMP_Text WarehouseNameText { get { return warehouseNameText; } set { warehouseNameText = value; } }
 
+    public GameObject techPanel;
+    [SerializeField] private Button[] techBtns;
+    [SerializeField] private TMP_Text[] techTexts;
+
     public static MainUI instance;
 
     void Awake()
@@ -39,6 +44,9 @@ public class MainUI : MonoBehaviour
     void Start()
     {
         UpdateResourceUI();
+        UpdateDayText();
+        SetTechBtnIcons();
+        UpdateTechBtns();
     }
 
     // Update is called once per frame
@@ -56,6 +64,11 @@ public class MainUI : MonoBehaviour
         cornText.text = Office.instance.Corn.ToString();
         milkText.text = Office.instance.Milk.ToString();
         appleText.text = Office.instance.Apple.ToString();
+    }
+
+    public void UpdateDayText()
+    {
+        dayText.text = GameManager.instance.Day.ToString() + " Day";
     }
 
     public void ToggleLaborPanel()
@@ -86,4 +99,56 @@ public class MainUI : MonoBehaviour
         else
             warehousePanel.SetActive(false);
     }
+
+    public void ToggleTechPanel()
+    {
+        if (!techPanel.activeInHierarchy)
+            techPanel.SetActive(true);
+        else
+            techPanel.SetActive(false);
+    }
+    public void ClickResearchTech(int i)
+    {
+        if (TechManager.instance.ResearchTech(i))
+        {
+            UpdateResourceUI();
+            techBtns[i].interactable = false;
+            techTexts[i].text = "In Progress";
+        }
+    }
+    private void SetTechBtnIcons()
+    {
+        for (int i = 0; i < techBtns.Length; i++)
+        {
+            techBtns[i].image.sprite = TechManager.instance.TechSet[i].Icon;
+        }
+    }
+
+    public void UpdateTechBtns()
+    {
+        for (int i = 0; i < techBtns.Length; i++)
+        {
+            if (TechManager.instance.CheckTechState(i, TechState.Locked))
+            {
+                techBtns[i].interactable = false;
+                techTexts[i].text = "Locked";
+            }
+            if (TechManager.instance.CheckTechState(i, TechState.Unlocked))
+            {
+                techBtns[i].interactable = true;
+                techTexts[i].text = "";
+            }
+            if (TechManager.instance.CheckTechState(i, TechState.InProgress))
+            {
+                techBtns[i].interactable = false;
+                techTexts[i].text = "In Progress";
+            }
+            if (TechManager.instance.CheckTechState(i, TechState.Completed))
+            {
+                techBtns[i].interactable = false;
+                techTexts[i].text = "Completed";
+            }
+        }
+    }
+
 }

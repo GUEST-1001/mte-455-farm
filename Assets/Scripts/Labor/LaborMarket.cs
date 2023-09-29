@@ -17,6 +17,9 @@ public class LaborMarket : MonoBehaviour
     [SerializeField] private List<GameObject> laborCardInMarket;
 
     [SerializeField] private int maxStaffInMarket = 20;
+
+    // [SerializeField] private GameObject workerPrefab;
+    // public GameObject WorkerPrefab { get { return workerPrefab; } }
     private int StaffInMarket = 0;
 
     private string[] maleName = { "Ben",  "John", "Sam", "Frank",
