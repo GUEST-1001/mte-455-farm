@@ -132,6 +132,12 @@ public class Farm : Structure
                     Office.instance.Melon += TechManager.instance.CheckTechBonus(1);
                     break;
                 }
+            case StructureType.apple:
+                {
+                    Office.instance.Apple += 1000;
+                    Office.instance.Apple += TechManager.instance.CheckTechBonus(1);
+                    break;
+                }
         }
 
         Office.instance.Money += TechManager.instance.CheckTechBonus(2);

@@ -33,7 +33,7 @@ public class FindBuildingSite : MonoBehaviour
 
     private void ChangeColor(Collider other, bool flag, Color color)
     {
-        if (other.tag == "Building" || other.tag == "House" || other.tag == "Farm" || other.tag == "Road" || other.tag == "Warehouse")
+        if (other.tag == "Building" || other.tag == "House" || other.tag == "Farm" || other.tag == "Road" || other.tag == "Warehouse" || other.tag == "Tree" || other.tag == "Mine")
         {
             pRenderer.material.color = color;
             canBuild = flag;

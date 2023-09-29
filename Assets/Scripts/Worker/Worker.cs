@@ -269,6 +269,7 @@ public class Worker : Unit
         // Deliver the resource to player
         Office.instance.Stone += curAmount;
         curAmount = 0;
+        MainUI.instance.UpdateResourceUI();
 
         // Go back to mining
         if (targetMine != null)

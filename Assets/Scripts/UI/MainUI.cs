@@ -61,8 +61,8 @@ public class MainUI : MonoBehaviour
         staffText.text = Office.instance.Workers.Count.ToString();
         wheatText.text = Office.instance.Wheat.ToString();
         melonText.text = Office.instance.Melon.ToString();
-        cornText.text = Office.instance.Corn.ToString();
-        milkText.text = Office.instance.Milk.ToString();
+        cornText.text = Office.instance.Wood.ToString();
+        milkText.text = Office.instance.Stone.ToString();
         appleText.text = Office.instance.Apple.ToString();
     }
 
@@ -116,6 +116,16 @@ public class MainUI : MonoBehaviour
             techTexts[i].text = "In Progress";
         }
     }
+
+
+    public void ToggleBTN(GameObject bTNs)
+    {
+        if (!bTNs.activeInHierarchy)
+            bTNs.SetActive(true);
+        else
+            bTNs.SetActive(false);
+    }
+
     private void SetTechBtnIcons()
     {
         for (int i = 0; i < techBtns.Length; i++)

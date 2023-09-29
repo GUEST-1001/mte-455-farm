@@ -12,6 +12,7 @@ TagManager:
   - Unit
   - Warehouse
   - Mine
+  - Tree
   layers:
   - Default
   - TransparentFX
