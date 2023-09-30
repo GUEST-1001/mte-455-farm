@@ -194,11 +194,23 @@ public class StructureManager : MonoBehaviour
 
     private void Demolish()
     {
-        Structure s = Office.instance.Structures.Find(x => x.transform.position == curCursorPos);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        // Debug.DrawRay(ray.origin, ray.direction * 10000f, Color.green);
 
-        if (s != null)
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
         {
-            Office.instance.RemoveBuilding(s);
+            try
+            {
+                Structure obj = hit.collider.gameObject.GetComponent<Structure>();
+                Office.instance.RemoveBuilding(obj);
+            }
+            catch
+            {
+                Debug.Log("Can not Demolish Object");
+                return;
+            }
         }
 
         MainUI.instance.UpdateResourceUI();
@@ -348,6 +360,16 @@ public class StructureManager : MonoBehaviour
                                                                         100f,
                                                                         "Mine");
         Office.instance.SendWorkerToMine(mine, CurStructure);
+        MainUI.instance.UpdateResourceUI();
+    }
+
+    public void CallWorkerTree() //Call Worker in Warehouse Panel
+    {
+        GameObject Tree = FindingTarget.CheckForNearestTree(CurStructure.transform.position,
+                                                                        100f,
+                                                                        "Tree");
+        Debug.Log(Tree);
+        Office.instance.SendWorkerToTree(Tree, CurStructure);
         MainUI.instance.UpdateResourceUI();
     }
 

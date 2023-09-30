@@ -13,6 +13,7 @@ public class UnitStateBubble : MonoBehaviour
     public Sprite sowState;
     public Sprite waterState;
     public Sprite harvestState;
+    public Sprite TreeState;
 
     public void OnStateChange(UnitState state)
     {
@@ -47,6 +48,10 @@ public class UnitStateBubble : MonoBehaviour
             case UnitState.Harvest:
                 stateBubbleImg.color = Color.white;
                 stateBubbleImg.sprite = harvestState;
+                break;
+            case UnitState.Treeing:
+                stateBubbleImg.color = Color.white;
+                stateBubbleImg.sprite = TreeState;
                 break;
             default:
                 stateBubbleImg.color = Color.white;

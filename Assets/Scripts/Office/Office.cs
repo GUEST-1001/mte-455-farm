@@ -230,4 +230,32 @@ public class Office : MonoBehaviour
         UpdateAvailStaff();
     }
 
+    public void SendWorkerToTree(GameObject tree, GameObject warehouse)
+    {
+        UpdateAvailStaff();
+
+        if (tree == null || availStaff <= 0)
+            return;
+
+        int n = 0; //number of Worker sent
+
+        for (int i = 0; i < workers.Count; i++)
+        {
+            if (workers[i].TargetStructure == null)
+            {
+                Worker w = workers[i].GetComponent<Worker>();
+
+                workers[i].TargetStructure = warehouse;
+                workers[i].TargetTree = tree;
+                w.StartTree(tree);
+                n++;
+            }
+
+            if (n >= 1)
+                break;
+        }
+
+        UpdateAvailStaff();
+    }
+
 }

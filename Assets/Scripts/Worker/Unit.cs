@@ -22,7 +22,11 @@ public enum UnitState
     MoveToMining,
     Deliver,
     MoveToDeliver,
-    Die
+    Die,
+    MoveToTree,
+    MoveToDeliverTree,
+    DeliverTree,
+    Treeing
 }
 
 public abstract class Unit : MonoBehaviour
@@ -62,6 +66,8 @@ public abstract class Unit : MonoBehaviour
 
     public UnityEvent<UnitState> onStateChange;
 
+    [SerializeField] protected bool alive = true;
+
 
     void Awake()
     {
@@ -75,6 +81,7 @@ public abstract class Unit : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
+
         CheckStaffState();
     }
 
@@ -130,7 +137,7 @@ public abstract class Unit : MonoBehaviour
         navAgent.isStopped = false;
     }
 
-        public void SetToWarp(Vector3 dest)
+    public void SetToWarp(Vector3 dest)
     {
         SetUnitState(UnitState.Idle);
 
@@ -243,6 +250,10 @@ public abstract class Unit : MonoBehaviour
             Unit u = targetUnit.GetComponent<Unit>();
             u.TakeDamage(this);
         }
+        else
+        {
+            SetUnitState(UnitState.Idle);
+        }
     }
 
     public void CheckSelfDefence(Unit u)
@@ -268,6 +279,11 @@ public abstract class Unit : MonoBehaviour
             onStateChange.Invoke(s);
 
         state = s;
+    }
+
+    public void DestroGameOject()
+    {
+        Destroy(this);
     }
 
 }

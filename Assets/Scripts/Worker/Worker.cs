@@ -40,6 +40,8 @@ public class Worker : Unit
     //Mining
     [SerializeField] private GameObject targetMine;
     public GameObject TargetMine { get { return targetMine; } set { targetMine = value; } }
+    [SerializeField] private GameObject targetTree;
+    public GameObject TargetTree { get { return targetTree; } set { targetTree = value; } }
 
     private int maxAmount = 30;
 
@@ -65,6 +67,7 @@ public class Worker : Unit
             miningTimer = 0f;
             CheckWorkerState();
         }
+        Debug.Log(TargetUnit);
     }
 
 
@@ -179,6 +182,21 @@ public class Worker : Unit
         }
         navAgent.isStopped = false;
     }
+    public void StartTree(GameObject tree)
+    {
+        if (tree == null)
+        {
+            targetTree = null;
+            SetUnitState(UnitState.MoveToDeliverTree);
+            navAgent.SetDestination(targetStructure.transform.position);
+        }
+        else
+        {
+            SetUnitState(UnitState.MoveToTree);
+            navAgent.SetDestination(tree.transform.position);
+        }
+        navAgent.isStopped = false;
+    }
 
     void MoveToMiningUpdate()
     {
@@ -189,7 +207,7 @@ public class Worker : Unit
                                                                         "Mine");
             StartMining(newMine);
         }
-        
+
         DisableAllTools();
         //Equip PickAxe
 
@@ -197,6 +215,26 @@ public class Worker : Unit
         {
             LookAt(navAgent.destination);
             SetUnitState(UnitState.Mining);
+        }
+    }
+
+    void MoveToTreeUpdate()
+    {
+        if (targetMine == null)
+        {
+            GameObject newTree = FindingTarget.CheckForNearestTree(targetStructure.transform.position,
+                                                                        100f,
+                                                                        "Tree");
+            StartTree(newTree);
+        }
+
+        DisableAllTools();
+        //Equip PickAxe
+
+        if (Vector3.Distance(transform.position, navAgent.destination) <= 1f)
+        {
+            LookAt(navAgent.destination);
+            SetUnitState(UnitState.Treeing);
         }
     }
 
@@ -238,6 +276,44 @@ public class Worker : Unit
             }
         }
     }
+    void TreeUpdate()
+    {
+        Mines mine;
+        if (targetMine != null)
+            mine = targetMine.GetComponent<Mines>();
+        else
+        {
+            GameObject newTree = FindingTarget.CheckForNearestTree(targetStructure.transform.position,
+                                                                        100f,
+                                                                        "Tree");
+            targetMine = newTree;
+            StartTree(newTree);
+            return;
+        }
+
+        // DisableAllTools();
+        //Equip PickAxe
+
+        if (Time.time - timeLastDig > digRate)
+        {
+            timeLastDig = Time.time;
+
+            if (curAmount < maxAmount)
+            {
+                mine.Deplete(3);
+                curAmount += 3;
+
+                if (curAmount > maxAmount)
+                    curAmount = maxAmount;
+            }
+            else //Move to deliver at HQ
+            {
+                SetUnitState(UnitState.MoveToDeliverTree);
+                navAgent.SetDestination(targetStructure.transform.position);
+                navAgent.isStopped = false;
+            }
+        }
+    }
 
     private void MoveToDeliverUpdate()
     {
@@ -253,6 +329,24 @@ public class Worker : Unit
         if (Vector3.Distance(transform.position, targetStructure.transform.position) <= 5f)
         {
             SetUnitState(UnitState.Deliver);
+            navAgent.isStopped = true;
+        }
+    }
+
+    private void MoveToDeliverTreeUpdate()
+    {
+        if (targetStructure == null)
+        {
+            SetUnitState(UnitState.Idle);
+            return;
+        }
+
+        DisableAllTools();
+        //Equip Load
+
+        if (Vector3.Distance(transform.position, targetStructure.transform.position) <= 5f)
+        {
+            SetUnitState(UnitState.DeliverTree);
             navAgent.isStopped = true;
         }
     }
@@ -291,6 +385,40 @@ public class Worker : Unit
             }
         }
     }
+    private void DeliverTreeUpdate()
+    {
+        //This unit stops when there is no target resource to go back and he has nothing to deliver
+        if (targetStructure == null)
+        {
+            SetUnitState(UnitState.Idle);
+            return;
+        }
+
+        // Deliver the resource to player
+        Office.instance.Wood += curAmount;
+        curAmount = 0;
+        MainUI.instance.UpdateResourceUI();
+
+        // Go back to mining
+        if (targetTree != null)
+        {
+            StartTree(targetTree);
+        }
+        else
+        {
+            GameObject newTree = FindingTarget.CheckForNearestTree(targetStructure.transform.position,
+                                                                    100f,
+                                                                    "Tree");
+            if (newTree != null)
+                StartTree(newTree);
+            else
+            {
+                targetStructure = null;
+                SetUnitState(UnitState.Idle);
+                navAgent.isStopped = true;
+            }
+        }
+    }
 
     #endregion
 
@@ -301,15 +429,28 @@ public class Worker : Unit
             case UnitState.MoveToMining:
                 MoveToMiningUpdate();
                 break;
+            case UnitState.MoveToTree:
+                MoveToTreeUpdate();
+                break;
             case UnitState.Mining:
                 MiningUpdate();
                 EquipTool(3);
                 break;
+            case UnitState.Treeing:
+                TreeUpdate();
+                EquipWeapon();
+                break;
             case UnitState.MoveToDeliver:
                 MoveToDeliverUpdate();
                 break;
+            case UnitState.MoveToDeliverTree:
+                MoveToDeliverTreeUpdate();
+                break;
             case UnitState.Deliver:
                 DeliverUpdate();
+                break;
+            case UnitState.DeliverTree:
+                DeliverTreeUpdate();
                 break;
         }
     }

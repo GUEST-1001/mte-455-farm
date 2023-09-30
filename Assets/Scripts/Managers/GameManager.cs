@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -12,6 +13,13 @@ public class GameManager : MonoBehaviour
     public int Day { get { return day; } set { day = value; } }
     [SerializeField] private float dayTimer = 0f;
     [SerializeField] private float secondsPerDat = 5f;
+    [SerializeField] private float enemySpqwnTime = 5f;
+    [SerializeField] private int maxEnemy = 15;
+
+    [SerializeField] private GameObject EnemyParent;
+    [SerializeField] private GameObject enemy;
+    [SerializeField] private GameObject plane;
+    private Bounds planeBounds;
 
     private void Awake()
     {
@@ -29,12 +37,18 @@ public class GameManager : MonoBehaviour
             SpawnAllStructures();
         }
         */
+        planeBounds = plane.GetComponent<Renderer>().bounds;
+        InvokeRepeating("RondomSpawn", 5f, enemySpqwnTime);
     }
 
     // Update is called once per frame
     void Update()
     {
         CheckTimeForDay();
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     RondomSpawn();
+        // }
     }
 
     private void CheckTimeForDay()
@@ -48,6 +62,29 @@ public class GameManager : MonoBehaviour
             TechManager.instance.CheckAllResearch();
             MainUI.instance.UpdateTechBtns();
         }
+    }
+
+    private void RondomSpawn()
+    {
+        if (getChildren(EnemyParent) < maxEnemy)
+        {
+            float rndX, rndZ;
+            rndX = Random.Range(planeBounds.min.x, planeBounds.max.x);
+            rndZ = Random.Range(planeBounds.min.z, planeBounds.max.z);
+            Vector3 spawnpoint = new Vector3(rndX, 0f, rndZ);
+            GameObject enemyPreF = Instantiate(enemy, spawnpoint, Quaternion.identity);
+            enemyPreF.transform.SetParent(EnemyParent.transform);
+        }
+    }
+
+    public int getChildren(GameObject obj)
+    {
+        int count = 0;
+
+        foreach (Transform child in obj.transform)
+            count++;
+
+        return count;
     }
 
     /*

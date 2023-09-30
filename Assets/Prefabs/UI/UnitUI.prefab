@@ -134,6 +134,7 @@ MonoBehaviour:
   sowState: {fileID: 21300000, guid: 21ac119afd6366046ba3c6f6760e8b1b, type: 3}
   waterState: {fileID: 21300000, guid: c5e224f712e3935438b30a56d8b1cd1e, type: 3}
   harvestState: {fileID: 21300000, guid: 9d4a5a59d7fb88d4bb17d9153787b909, type: 3}
+  TreeState: {fileID: -1140361336, guid: 82196b2f56a90444fa12712579677900, type: 3}
 --- !u!1 &6380378168791065076
 GameObject:
   m_ObjectHideFlags: 0
