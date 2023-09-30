@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -45,10 +46,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         CheckTimeForDay();
-        // if (Input.GetKeyDown(KeyCode.Space))
-        // {
-        //     RondomSpawn();
-        // }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     private void CheckTimeForDay()
